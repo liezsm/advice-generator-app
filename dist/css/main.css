@@ -1,4 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  background-color: black;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #202632;
+  font-family: "Manrope", sans-serif;
+  text-align: center;
+}
+
+.advice {
+  background-color: #323a49;
+  width: 90vw;
+  border-radius: 0.7rem;
+  padding: 0 1.25rem;
+  padding-top: 2.625rem;
+}
+
+@media (min-width: 1040px) {
+  .advice {
+    width: 33.75rem;
+    height: 20.625rem;
+  }
+}
+
+.advice > *:not(:last-child) {
+  margin-bottom: 1.6875rem;
+}
+
+.advice .advice-tracker {
+  text-transform: uppercase;
+  color: #52ffa8;
+  font-size: 0.8rem;
+}
+
+.advice .advice-content {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 800;
+}
+
+.advice .advice-btn {
+  display: block;
+  margin: auto;
+  margin-bottom: -2rem;
+  background-color: #52ffa8;
+  border: none;
+  outline: none;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  height: 60px;
+  width: 60px;
+  -webkit-transition: 300ms all ease-in-out;
+  transition: 300ms all ease-in-out;
+}
+
+@media (min-width: 1040px) {
+  .advice .advice-btn {
+    margin-top: 1.5rem;
+  }
+}
+
+.advice .advice-btn img {
+  width: 60%;
+}
+
+.advice-btn:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=main.css.map */
