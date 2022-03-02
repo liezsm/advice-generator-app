@@ -3,6 +3,11 @@
     @content;
   }
 }
+@mixin smalldesktop() {
+  @media (min-width: $smalldesktop) {
+    @content;
+  }
+}
 
 @mixin desktop() {
   @media (min-width: $desktop) {

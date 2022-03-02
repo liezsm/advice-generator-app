@@ -16,23 +16,30 @@ body {
 .advice {
   background-color: $dark-Grayish-Blue;
   width: 90vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  min-height: 20rem;
+
   border-radius: 0.7rem;
   padding: 0 1.25rem;
   padding-top: 2.625rem;
+  position: relative;
 
-  @include desktop() {
+  @include smalldesktop() {
     width: 33.75rem;
-    height: 20.625rem;
+    min-height: 20.625rem;
   }
 
-  & > *:not(:last-child) {
-    // border: 2px solid red;
-    margin-bottom: 1.6875rem;
-  }
+  #{&}-wrap {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 95%;
+    margin-bottom: 0.3rem;
 
+    & > * {
+      margin-bottom: 1.6875rem;
+    }
+  }
   #{&}-tracker {
     text-transform: uppercase;
     color: $neonGreen;
@@ -40,9 +47,13 @@ body {
   }
 
   #{&}-content {
-    font-size: $font-size;
+    font-size: 1.3125rem;
     color: #fff;
     font-weight: 800;
+
+    @include tablet() {
+      font-size: $font-size;
+    }
   }
 
   #{&}-pattern-mobile {
@@ -65,13 +76,18 @@ body {
   }
 
   #{&}-btn {
+    border: 2px solid red;
     display: block;
-    margin: auto;
+    margin: 0 auto;
     margin-bottom: -2rem;
     background-color: $neonGreen;
-    border: none;
+    // border: none;
+    border-radius: 50%;
     outline: none;
-    clip-path: circle();
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     height: 60px;
     width: 60px;
     transition: 300ms all ease-in-out;
@@ -87,9 +103,9 @@ body {
 
 .advice-btn:hover {
   cursor: pointer;
-  transform: scale(1.1);
+
   //   https://www.cssmatic.com/box-shadow -creating box shadow
-  //   -webkit-box-shadow: 10px 10px 157px -21px rgba(2, 255, 128, 0.98);
-  //   -moz-box-shadow: 10px 10px 157px -21px rgba(2, 255, 128, 0.98);
-  //   box-shadow: 10px 10px 157px 60px rgba(2, 255, 128, 0.98);
+  -webkit-box-shadow: 10px 10px 157px -21px rgba(2, 255, 128, 0.98);
+  -moz-box-shadow: 10px 10px 157px -21px rgba(2, 255, 128, 0.98);
+  box-shadow: 10px 10px 100px 10px rgba(2, 255, 128, 0.98);
 }

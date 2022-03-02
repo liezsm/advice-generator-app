@@ -21,6 +21,22 @@ body {
 .advice {
   background-color: #323a49;
   width: 90vw;
+  min-height: 20rem;
+  border-radius: 0.7rem;
+  padding: 0 1.25rem;
+  padding-top: 2.625rem;
+  position: relative;
+}
+
+@media (min-width: 769px) {
+  .advice {
+    width: 33.75rem;
+    min-height: 20.625rem;
+  }
+}
+
+.advice .advice-wrap {
+  border: 2px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,19 +47,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 0.7rem;
-  padding: 0 1.25rem;
-  padding-top: 2.625rem;
+  max-height: 95%;
+  margin-bottom: 0.3rem;
 }
 
-@media (min-width: 1040px) {
-  .advice {
-    width: 33.75rem;
-    height: 20.625rem;
-  }
-}
-
-.advice > *:not(:last-child) {
+.advice .advice-wrap > * {
   margin-bottom: 1.6875rem;
 }
 
@@ -54,9 +62,15 @@ body {
 }
 
 .advice .advice-content {
-  font-size: 28px;
+  font-size: 1.3125rem;
   color: #fff;
   font-weight: 800;
+}
+
+@media (min-width: 481px) {
+  .advice .advice-content {
+    font-size: 28px;
+  }
 }
 
 .advice .advice-pattern-mobile {
@@ -84,14 +98,18 @@ body {
 }
 
 .advice .advice-btn {
+  border: 2px solid red;
   display: block;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: -2rem;
   background-color: #52ffa8;
-  border: none;
+  border-radius: 50%;
   outline: none;
-  -webkit-clip-path: circle();
-          clip-path: circle();
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   height: 60px;
   width: 60px;
   -webkit-transition: 300ms all ease-in-out;
@@ -110,7 +128,7 @@ body {
 
 .advice-btn:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-box-shadow: 10px 10px 157px -21px rgba(2, 255, 128, 0.98);
+  box-shadow: 10px 10px 100px 10px rgba(2, 255, 128, 0.98);
 }
 /*# sourceMappingURL=main.css.map */
