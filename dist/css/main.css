@@ -101,6 +101,7 @@ body {
   margin: 0 auto;
   margin-bottom: -2rem;
   background-color: #52ffa8;
+  border: none;
   border-radius: 50%;
   outline: none;
   position: absolute;
