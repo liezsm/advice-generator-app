@@ -16,6 +16,9 @@ body {
 .advice {
   background-color: $dark-Grayish-Blue;
   width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border-radius: 0.7rem;
   padding: 0 1.25rem;
   padding-top: 2.625rem;
@@ -40,6 +43,25 @@ body {
     font-size: $font-size;
     color: #fff;
     font-weight: 800;
+  }
+
+  #{&}-pattern-mobile {
+    display: block;
+    visibility: visible;
+
+    @include tablet() {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  #{&}-pattern-desktop {
+    display: none;
+    visibility: hiddene;
+
+    @include tablet() {
+      display: block;
+      visibility: visible;
+    }
   }
 
   #{&}-btn {

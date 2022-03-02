@@ -21,6 +21,16 @@ body {
 .advice {
   background-color: #323a49;
   width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 0.7rem;
   padding: 0 1.25rem;
   padding-top: 2.625rem;
@@ -47,6 +57,30 @@ body {
   font-size: 28px;
   color: #fff;
   font-weight: 800;
+}
+
+.advice .advice-pattern-mobile {
+  display: block;
+  visibility: visible;
+}
+
+@media (min-width: 481px) {
+  .advice .advice-pattern-mobile {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.advice .advice-pattern-desktop {
+  display: none;
+  visibility: hiddene;
+}
+
+@media (min-width: 481px) {
+  .advice .advice-pattern-desktop {
+    display: block;
+    visibility: visible;
+  }
 }
 
 .advice .advice-btn {
