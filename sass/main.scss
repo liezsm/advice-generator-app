@@ -29,7 +29,7 @@ body {
   }
 
   #{&}-wrap {
-    border: 2px solid red;
+    // border: 2px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,7 +76,7 @@ body {
   }
 
   #{&}-btn {
-    border: 2px solid red;
+    // border: 2px solid red;
     display: block;
     margin: 0 auto;
     margin-bottom: -2rem;
